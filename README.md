@@ -1,2 +1,2 @@
 # Projects_DS_Course
-Columbia Projects in Data Science Course
+Includes work for "Projects in Data Science (Python)" course.
