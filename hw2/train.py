@@ -39,9 +39,11 @@ from sklearn.manifold import Isomap
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 
-thePath = 'classify/'
+# this path needs access to the files to train
+thePath = os.path.dirname(os.path.realpath(__file__)) + '/classify/'
 
-thePathLut = ''
+# where the classifierLUT.csv file is
+thePathLut = os.path.dirname(os.path.realpath(__file__)) + "/"
 theCols = os.walk(thePath).next()[1]  
 
 theLabels = theCols 

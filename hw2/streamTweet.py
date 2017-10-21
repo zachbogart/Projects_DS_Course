@@ -6,8 +6,8 @@ json = import_simplejson()
 
 import predict
 
-auth1 = tweepy.auth.OAuthHandler('U8svDinW92huSMQNfxKQwJMFK','nDZUrP2SCL6kqLCdcSqbN45ReRajnPan2BOkrZfdRMV31Fl3Ao')  
-auth1.set_access_token('4661808615-wM3V52jYLsEuRlDnsVUC8vkYjkLzNAb2pLSDuCy','6ZWesNDoFCCFqL9FlBtxlE0iL9CfLi7psajgYz5ojOjQS')  
+auth1 = tweepy.auth.OAuthHandler('<Consumer Key (API Key)>','<Consumer Secret (API Secret)>')  
+auth1.set_access_token('<Access Token>','<Access Token Secret>')  
 api = tweepy.API(auth1)
 
 mongo = MongoClient('localhost', 27017)

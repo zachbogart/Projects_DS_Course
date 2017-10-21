@@ -27,11 +27,14 @@ def genCorpus(theText):
     #function of whole file
 def predictText(tempText):
         
-    thePath = 'classify/'
+    # where the classify files are
+    thePath = os.path.dirname(os.path.realpath(__file__)) + '/classify/'
     
     theCols = os.walk(thePath).next()[1]    
     
-    path = '/Users/bogart/Documents/Zach/Columbia/Fall 2017/projects_ds/homework/hw2/'
+    # where all the files are that train.py generated
+    path = os.path.dirname(os.path.realpath(__file__)) + "/"
+    
     vectorizer = joblib.load(path + 'vectorizer.pk') 
     pca = joblib.load(path + 'pca.pk') 
     for file in os.listdir(path):
