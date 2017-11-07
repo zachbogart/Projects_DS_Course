@@ -37,7 +37,7 @@ def getTweets(resultContainer, databaseName, setTerms, consumerKeyAPIKey, consum
                     mongo_collection.insert_one({
                     'message_id': status.id,
                     'screen_name': status.author.screen_name,
-#                    'body': tweetText,
+                    'body': tweetText,
                     'created_at': status.created_at,
                     'followers': status.user.followers_count,
                     'friends_count': status.user.friends_count,
