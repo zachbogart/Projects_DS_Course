@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score
 printResults = True
 
 # grab the input training data and add age bins
-labeled_training_data = pd.read_csv("user_ages_train.csv")
+labeled_training_data = pd.read_csv("inputData/user_ages_train.csv")
 biggest_age = max(labeled_training_data['Age'])
 ageLabels = ['18-24', '25-34', '35-44', '45-54', '55-64', '65+']
 ageBins = [0,24,34,44,54,64,biggest_age]
@@ -25,8 +25,8 @@ binValues = [0,1,2,3,4,5]
 labeled_training_data['bin_values'] = pd.cut(labeled_training_data['Age'], bins=ageBins, labels=binValues)
 
 # grab user profile and twitter data files
-data_profiles = json.load(open('user_age_profiles.json'))
-data_tweets = json.load(open('user_age_tweets.json'))
+data_profiles = json.load(open('inputData/user_age_profiles.json'))
+data_tweets = json.load(open('inputData/user_age_tweets.json'))
 
 # make profile dataframe
 profiles = pd.DataFrame.from_dict(json_normalize(data_profiles), orient='columns')
